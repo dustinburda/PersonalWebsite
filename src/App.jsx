@@ -1,6 +1,5 @@
 
 import Header from './Header.jsx'
-import './App.css'
 import './my.css'
 
 function Education()
@@ -18,13 +17,10 @@ function Education()
 
 function App() {
   return (
-    <>
-      <div>
-        <Header />
-        <hr />
-        <Education />
-      </div>
-    </>
+    <div class="App">
+      <Header />
+      <Education />
+    </div>
   )
 }
 

@@ -1,19 +1,33 @@
+import { Fragment } from "react";
+
 function Picture()
 {
     return(
-        <div class="picture">
-            <img src="./react.svg"></img>
+        <div class="picture-frame">
+            <img class="picture" src="./src/assets/react.svg"></img>
         </div>
     );
 }
 
 function Links()
 {
+    const links = [
+        {
+            linkName: "github",
+            link: "https://github.com/dustinburda"
+        },
+        {
+            linkName: "linkedin",
+            link: "https://www.linkedin.com/in/dustin-burda/"
+        },
+        {
+            linkName: "resume",
+            link: " ./src/assets/BurdaDustinResumeFuture.pdf"
+        }
+    ]
     return(
         <div class="contacts">
-            <a>github  </a>
-            <a>linkedin  </a>
-            <a>resume  </a>
+            {links.map((linkObject) => <a href={linkObject.link}> {linkObject.linkName} </a>)}
         </div>
     );
 }
@@ -33,9 +47,12 @@ function Intro()
 export default function Header()
 {
   return(
-    <div class="header">
-        <Intro />
-        <Picture />
-    </div>
+    <Fragment>
+        <div class="header">
+            <Intro />
+            <Picture />
+        </div>
+        <hr />
+    </Fragment>
   );
 }
