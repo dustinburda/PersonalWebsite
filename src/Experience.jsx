@@ -6,7 +6,7 @@ export default function Experience()
     let experienceObjects = [
         {
             companyName: "Investortools",
-            title: "Software Engineer",
+            title: "Software Engineer (Core C++/JS Platform)",
             date: "July 2024 - Present"
         },
         {

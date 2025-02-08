@@ -4,7 +4,7 @@ function Picture()
 {
     return(
         <div class="picture-frame">
-            <img class="picture" src="./src/assets/react.svg"></img>
+            <img class="picture" src="./src/assets/david.png"></img>
         </div>
     );
 }
