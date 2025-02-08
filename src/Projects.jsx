@@ -1,14 +1,13 @@
 import { Fragment } from "react";
 
-export default function Experience()
+export default function Projects()
 {
     return(
         <Fragment>
-            <div class="experience">
-                <h2>Experience</h2>
+            <div class="projects">
+                <h2>Projects</h2>
             </div>
             <hr />
         </Fragment>
-
     );
 }
