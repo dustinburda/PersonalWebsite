@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import { links } from "./data/headerdata";
 
 function Picture()
 {
@@ -8,23 +9,8 @@ function Picture()
         </div>
     );
 }
-
 function Links()
 {
-    const links = [
-        {
-            linkName: "github",
-            link: "https://github.com/dustinburda"
-        },
-        {
-            linkName: "linkedin",
-            link: "https://www.linkedin.com/in/dustin-burda/"
-        },
-        {
-            linkName: "resume",
-            link: " ./src/assets/BurdaDustinResumeFuture.pdf"
-        }
-    ]
     return(
         <div class="contacts">
             {links.map((linkObject) => <a href={linkObject.link}> {linkObject.linkName} </a>)}
