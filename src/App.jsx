@@ -5,6 +5,22 @@ import Experience from './Experience.jsx'
 import Projects from './Projects.jsx'
 import './css/my.css'
 
+
+function Nav()
+{
+  return (
+    <div>
+      <div class="navbar" style={{ display: "flex", justifyContent: "space-between"}}>
+        <a class="nav-link">Education</a>
+        <a class="nav-link">Experience</a>
+        <a class="nav-link">Projects</a>
+      </div>
+      <hr />
+    </div>
+  );
+
+}
+
 function Footer()
 {
   return(
@@ -16,6 +32,7 @@ function App() {
   return (
     <div class="App">
       <Header />
+      <Nav />
       <Education />
       <Experience />
       <Projects />
