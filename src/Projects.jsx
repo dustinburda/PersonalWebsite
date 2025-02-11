@@ -21,11 +21,11 @@ function ProjectItem( {projectObject, index, arr} )
     );
 }
 
-export default function Projects()
+export default function Projects( {projectRef} )
 {
     return(
         <Fragment>
-            <div class="projects">
+            <div class="projects" ref={projectRef}>
                 <h2>Projects</h2>
                 {projectObjects.map((projectObject, index, arr) => 
                     <ProjectItem projectObject={projectObject} index={index} arr={arr}/>

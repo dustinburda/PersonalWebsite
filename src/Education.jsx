@@ -1,6 +1,6 @@
 import { Fragment, useState } from "react";
 import { educationObjects } from "./data/educationdata"; 
-
+import educationRef from "./Nav"
 
 function MoreButton( {educationObject} )
 {
@@ -24,7 +24,7 @@ function MoreButton( {educationObject} )
     );
 }
 
-function EducationItem(  {educationObject, index, arr} )
+function EducationItem(  {educationRef, educationObject, index, arr} )
 {
     return (
     <> 
@@ -44,12 +44,12 @@ function EducationItem(  {educationObject, index, arr} )
     );
 }
 
-export default function Education()
+export default function Education( {educationRef} )
 {
 
 return(
   <Fragment>
-  <div class="education">
+  <div class="education" ref={educationRef}>
     <h2>Education</h2>
     <div>
         {educationObjects.map((educationObject, index, arr) =>

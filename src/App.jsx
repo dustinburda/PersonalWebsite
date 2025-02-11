@@ -1,25 +1,13 @@
 
+import Nav from './Nav.jsx'
 import Header from './Header.jsx'
 import Education from './Education.jsx'
 import Experience from './Experience.jsx'
 import Projects from './Projects.jsx'
 import './css/my.css'
+import { useRef } from 'react'
 
 
-function Nav()
-{
-  return (
-    <div>
-      <div class="navbar" style={{ display: "flex", justifyContent: "space-between"}}>
-        <a class="nav-link">Education</a>
-        <a class="nav-link">Experience</a>
-        <a class="nav-link">Projects</a>
-      </div>
-      <hr />
-    </div>
-  );
-
-}
 
 function Footer()
 {
@@ -29,13 +17,18 @@ function Footer()
 }
 
 function App() {
+
+  const educationRef = useRef(null);
+  const experienceRef = useRef(null);
+  const projectRef = useRef(null);
+  
   return (
     <div class="App">
       <Header />
-      <Nav />
-      <Education />
-      <Experience />
-      <Projects />
+      <Nav educationRef={educationRef} experienceRef={experienceRef} projectRef={projectRef}/>
+      <Education educationRef = {educationRef} />
+      <Experience experienceRef={experienceRef}/>
+      <Projects projectRef={projectRef}/>
       <Footer />
     </div>
   )

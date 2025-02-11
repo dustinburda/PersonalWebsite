@@ -20,11 +20,11 @@ function ExperienceItem( {experienceObject, index, arr} )
 }
 
 
-export default function Experience()
+export default function Experience( {experienceRef} )
 {
     return(
         <Fragment>
-            <div class="experience">
+            <div class="experience" ref={experienceRef}>
                 <h2>Experience</h2>
                 {experienceObjects.map((experienceObject, index, arr) => 
                     <ExperienceItem experienceObject = {experienceObject} index = {index} arr = {arr}/>
