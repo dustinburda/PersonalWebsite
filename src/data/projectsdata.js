@@ -21,7 +21,7 @@ let projectObjects = [
         name: "smallDB",
         description: "Toy Database Engine",
         technologies: "C++ 17, GTest",
-        githubLink: "https://github.com/dustinburda"
+        githubLink: "https://github.com/dustinburda/smallDB"
     }
 ]
 
