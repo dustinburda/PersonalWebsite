@@ -1,11 +1,12 @@
 import { Fragment } from "react";
 import { links } from "./data/headerdata";
+import david from './assets/david.png'
 
 function Picture()
 {
     return(
         <div class="picture-frame">
-            <img class="picture" src="./src/assets/david.png"></img>
+            <img class="picture" src={david}></img>
         </div>
     );
 }
